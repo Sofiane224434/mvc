@@ -2,19 +2,20 @@
 namespace App\Controllers;
 
 use Core\BaseController;
-use App\Services\HomeService;
+
 
 class HomeController extends BaseController
 {
-    private HomeService $homeService;
-
-    public function __construct()
-    {
-        $this->homeService = new HomeService();
-    }
-
     public function index(): void
     {
-        $this->render('home/index', $this->homeService->getHomeData());
+        $this->render('home/index', $this->getHomeData());
+    }
+
+    public function getHomeData(): array
+    {
+        return [
+            'title' => 'Bienvenue sur le mini-MVC',
+            'message' => 'Architecture MVC minimaliste'
+        ];
     }
 }

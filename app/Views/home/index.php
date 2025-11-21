@@ -11,4 +11,4 @@
   <?= htmlspecialchars($title ?? 'Accueil', ENT_QUOTES, 'UTF-8') ?>
 </h1>
 
-<p>Bienvenue dans le projet mini-MVCS minimal.</p>
+<p class="text-2xl">Bienvenue dans le projet mini-MVCS minimal.</p>
