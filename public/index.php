@@ -3,6 +3,9 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Core\Router;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 $router = new Router();
 $router->get('/', 'App\\Controllers\\HomeController@index');
 $router->get('/error/404', 'App\\Controllers\\ErrorController@notFound');
